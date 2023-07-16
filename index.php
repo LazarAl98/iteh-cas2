@@ -13,7 +13,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     //$odg = $korisnik->logInUser($uname, $upass, $conn);
     $odg = User::logInUser($korisnik, $conn); //pristup statickim funkcijama preko klase
 
-    if ($odg) {
+    if ($odg->num_rows == 1) {
         echo `<script>
         console.log("Uspesno ste se prijavili");
         </script>`;
