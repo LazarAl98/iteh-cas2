@@ -8,7 +8,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $uname = $_POST['username'];
     $upass = $_POST['password'];
 
-    $conn = new mysqli();
 
     $korisnik = new User(null, $uname, $upass);
     //$odg = $korisnik->logInUser($uname, $upass, $conn);
