@@ -52,7 +52,7 @@ class Prijava
 
     public function update(mysqli $conn)
     {
-        $q = "UPDATE prijave set predmet='$this->predmet',katedra='$this->katedra',sala='$this->sala',datum='$this->datum')";
+        $q = "UPDATE prijave set predmet='$this->predmet',katedra='$this->katedra',sala='$this->sala',datum='$this->datum'";
         return $conn->query($q);
     }
 }
