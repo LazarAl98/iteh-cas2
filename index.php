@@ -9,7 +9,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $upass = $_POST['password'];
 
 
-    $korisnik = new User(null, $uname, $upass);
+    $korisnik = new User(1, $uname, $upass);
     //$odg = $korisnik->logInUser($uname, $upass, $conn);
     $odg = User::logInUser($korisnik, $conn); //pristup statickim funkcijama preko klase
 
